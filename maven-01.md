@@ -19,14 +19,19 @@
 
 >  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A：
 清理项目
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B：
 编译项目
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C：
 测试项目
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D：
 生成测试报告
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E：
 打包项目
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F：
 部署项目
 
@@ -94,27 +99,27 @@ Java -version
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、Maven项目的目录约定
 MavenProjectRoot（项目根目录）
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-----src
+|-----src
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-----|-----main
+|-----|-----main
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-----|-----|-----java—— ——存放项目的.java文件
+|-----|-----|-----java—— ——存放项目的.java文件
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-----|-----|-----resources—— ——存放项目资源文件，如spring，hibernate配置文档
+|-----|-----|-----resources—— ——存放项目资源文件，如spring，hibernate配置文档
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-----|-----test
+|-----|-----test
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-----|-----|-----java—— ——存放所有测试的.java文件，如junit测试类
+|-----|-----|-----java—— ——存放所有测试的.java文件，如junit测试类
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-----|-----|-----resources—— ——存放项目资源文件，如spring，hibernate配置文档
+|-----|-----|-----resources—— ——存放项目资源文件，如spring，hibernate配置文档
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-----target—— ——项目输出位置
+|-----target—— ——项目输出位置
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-----pom.xml—— ——用于标识该项目是一个Maven项目
+|-----pom.xml—— ——用于标识该项目是一个Maven项目
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、手动创建Maven项目，使用Maven编译
+2、手动创建Maven项目，使用Maven编译
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、创建项目跟文件夹，例如Maven01
+1、创建项目跟文件夹，例如Maven01
 
 ![image](image/maven01.png)
 
