@@ -123,7 +123,7 @@ pom文件的详细解析：
 
 ![image](maven-image/测试后生成的class文件.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;C：打包
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;进入命令行，切换到myapp目录，执行命令：mvn clean package,执行打包命令前，会先执行编译和测试命令，如下图所示：
 
@@ -194,3 +194,5 @@ pom文件的详细解析：
 &nbsp;&nbsp;&nbsp;&nbsp;接着我们将创建好的javaWeb导入Eclipse中进行开发了，如下图所示：
 
 ![image](maven-image/导入eclipse中的javaWeb目录结构.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;进入命令行，切换到myapp目录，执行命令：mvn clean package,执行打包命令前，会先执行编译和测试命令，如下图所示：

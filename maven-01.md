@@ -17,7 +17,7 @@
 #### 1、项目构建
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目构建的过程包括：
 
->  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A：
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A：
 清理项目
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B：
@@ -51,6 +51,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下载地址： http://maven.apache.org/download.cgi
 
 ![image](image/download.png)
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下载完成后会得到一个压缩包，解压缩压缩包后会得到如下的结构：
 ![image](image/list.png)
 
@@ -63,28 +65,41 @@
 
 ### 三、Maven安装
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、首先要确保电脑上安装了JDK，配置好JDK的环境变量，使用如下的两个命令检查JDK安装的情况。
+
+ ```
+                    Echo %JAVA_HOME%
+                    Java -version
 ```
-Echo %JAVA_HOME%
-Java -version
-```
-![image](image/setup.png)
+         
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/setup.png)
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、对apache-maven-3.2.3-bin.zip进行解压缩
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对apache-maven-3.2.3-bin.zip进行解压缩，例如解压到如下目录（<font color="red">解压目录最好不要有中文</font>）
-![image](image/expire.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/expire.png)
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、设置系统环境变量：MAVEN_HOME
-![image](image/setting.png)
-![image](image/setting1.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/setting.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/setting1.png)
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、设置环境变量Path，将%MAVEN_HOME%\bin加入Path中，一定要注意用分号；与其他值隔开。如下图所示：
 
-![image](image/path-setting.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/path-setting.png)
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%MAVEN_HOME%\bin代表的就是"E:\apache-maven-3.2.3\bin"目录
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5、验证Maven是否安装成功
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打开cmd窗口
-![image](image/validate.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/validate.png)
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;输入“mvn-v”命令，查看Maven的相关信息，如下图所示：
-![image](image/showInfo.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/showInfo.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6、设置MAVEN_OPTS环境变量（可选配置）
 
@@ -93,7 +108,8 @@ Java -version
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MAVEN_OPTS
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Xms128m -Xmx512m,分别设置最大
-![image](image/opts.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/opts.png)
 
 ### 四：Maven的简单使用
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、Maven项目的目录约定
@@ -121,11 +137,11 @@ MavenProjectRoot（项目根目录）
 
 1、创建项目跟文件夹，例如Maven01
 
-![image](image/maven01.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/maven01.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、在Maven01文件夹中创建“pom.xml”文件，如下图所示
 
-![image](image/pom.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/pom.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pom.xml文件中的内容如下：
 ```
@@ -146,9 +162,11 @@ MavenProjectRoot（项目根目录）
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、编写Java类文件，Maven项目规定所有的*.java文件必须放在src目录下的main目录下的java目录中，在Maven01项目根目录中创建一个src目录，然后在src目录中创建main目录，在main目录下在创建java文件夹，如下图所示：
 
-![image](image/maven-summary01.png)
-![image](image/maven-summary02.png)
-![image](image/maven-summary03.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/maven-summary01.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/maven-summary02.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/maven-summary03.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在java文件夹下创建一个Hello.java文件，如下图所示：
 
@@ -164,56 +182,56 @@ MavenProjectRoot（项目根目录）
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、使用Maven编译Hello.java，首先进入到项目根目录，然后使用命令”mvn compile”进行编译，如下图所示：
 
-![image](image/compile01.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/compile01.png)
 
-![image](image/compile02.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/compile02.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用Maven编译完成后，在项目根目录下会生成一个target文件夹，如下图所示：
 
-![image](image/target.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/target.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打开target文件夹，可以看到里面有一个classes文件夹，如下图所示：
 
-![image](image/target-classes.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/target-classes.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5、使用“mvn clean”命令清除编译结果，也就是把编译生成的target文件夹删掉，如下图所示：
 
-![image](image/clean.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/clean.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行完"mvn -clean"命令后，target文件夹就会被删除了。
 ### 五、修改Maven中心仓库下载到本地的jar包的默认存储位置
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从Maven中心仓库下载到本地的jar包的默认存放在“${user.home}/.m2/repository”中，${user.home}表示当前登陆系统的用户目录（如"C:\Users\gacl"），如下图所示：
 
-![image](image/m2.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/m2.png)
 
-![image](image/repository.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/repository.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jar包存放在这个位置不太好，我们希望能跟狗自己定义下载下来的jar包的存放位置，因此我们可以自己设置下载到本地时的jar包存放目录。
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在“E:\”目录下创建一个"repository"文件夹
 
-![image](image/self.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/self.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;找到apache-maven-3.2.3\conf目录下的settings.xml文件，如下图所示：
 
-![image](image/settings.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/settings.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编辑setting.xml文件，如下图所示：
 
-![image](image/edit-setting.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/edit-setting.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加上下面的代码：
 ```
-  <localRepository>E:/repository</localRepository>
+               <localRepository>E:/repository</localRepository>
 ```
-![image](image/set-menu.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/set-menu.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;就这样可以把jar包下载到我们指定的E:/repository目录中了，如下图所示：
 
-![image](image/downloadJar.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/downloadJar.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;把jar包下载到本地的好处就是当编译时，会优先从本地的jar包去找，如果本地存在，就直接拿来用，如果不存在，就从Maven的中心仓库去下载。如下图所示：
 
-![image](image/jar-mvn.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/jar-mvn.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一次执行“mvn -compile”和“mvn -clean”这两个命令时，Maven会去中央仓库下载所需的jar包，而第二次执行这两个命令时，由于所需的jar包已经在本地的仓库中存储，所以就可以直接拿来用了，这样就省去了去中央仓库下载jar包的时间。
