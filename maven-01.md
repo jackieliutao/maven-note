@@ -51,6 +51,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下载地址： http://maven.apache.org/download.cgi
 
 ![image](image/download.png)
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下载完成后会得到一个压缩包，解压缩压缩包后会得到如下的结构：
 ![image](image/list.png)
 
