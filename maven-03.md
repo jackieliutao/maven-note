@@ -6,9 +6,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;A:使用mvn archetype：generate命令，如下所示：
 ```
 mvn archetype:generate -DroupId = com.mycompany.app
-               -DartifactId = myapp
-               -DarchetypeArtifactId = maven-archetype-quickstart
-               -DinteractiveMode=false
+                       -DartifactId = myapp
+                       -DarchetypeArtifactId = maven-archetype-quickstart
+                       -DinteractiveMode=false
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;B：使用mvn archetype:create命令，如下所示：
 ```
@@ -17,7 +17,7 @@ mvn archetype:create -DgroupId = com.mycompany.app
                 -DarchetypeArtifactId = maven-archetype-quickstart
                 -DinteractiveMode = false
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;<font color='red' weight='bold'>generate和create的区别：</font>generate创建项目耗时长，create创建项目耗时短。
+&nbsp;&nbsp;&nbsp;&nbsp;<font color='red' font-weight='bold'>generate和create的区别：</font>generate创建项目耗时长，create创建项目耗时短。
 
 &nbsp;&nbsp;&nbsp;&nbsp;使用mvn archetype:create命令创建项目的过程如下所示：
 ![image](maven-image/使用create创建java项目.png)
