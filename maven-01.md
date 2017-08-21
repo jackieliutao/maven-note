@@ -17,7 +17,7 @@
 #### 1、项目构建
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目构建的过程包括：
 
->  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A：
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A：
 清理项目
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B：
@@ -63,11 +63,11 @@
 
 ### 三、Maven安装
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、首先要确保电脑上安装了JDK，配置好JDK的环境变量，使用如下的两个命令检查JDK安装的情况。
-```
-Echo %JAVA_HOME%
-Java -version
-```
-![image](image/setup.png)
+         ```
+                    Echo %JAVA_HOME%
+                    Java -version
+         ```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/setup.png)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、对apache-maven-3.2.3-bin.zip进行解压缩
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对apache-maven-3.2.3-bin.zip进行解压缩，例如解压到如下目录（<font color="red">解压目录最好不要有中文</font>）
