@@ -123,9 +123,8 @@ pom文件的详细解析：
 
 ![image](maven-image/测试后生成的class文件.png)
 
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;进入命令行，切换到myapp目录，执行命令：mvn clean package,执行打包命令前，会先执行编译和测试命令，如下图所示：
+&nbsp;&nbsp;&nbsp;&nbsp;C：打包
+> &nbsp;&nbsp;&nbsp;&nbsp;进入命令行，切换到myapp目录，执行命令：mvn clean package,执行打包命令前，会先执行编译和测试命令，如下图所示：
 
 ![image](maven-image/打包.png)
 
@@ -195,4 +194,90 @@ pom文件的详细解析：
 
 ![image](maven-image/导入eclipse中的javaWeb目录结构.png)
 
-&nbsp;&nbsp;&nbsp;&nbsp;进入命令行，切换到myapp目录，执行命令：mvn clean package,执行打包命令前，会先执行编译和测试命令，如下图所示：
+#### 2、使用Maven打包发布Web项目
+
+&nbsp;&nbsp;&nbsp;&nbsp;Maven帮我们创建的JavaWeb项目是一个空的项目，只有一个index.jsp页面，只有一个index.jsp页面，我们使用Maven将Web项目打包发布运行。
+
+&nbsp;&nbsp;&nbsp;&nbsp;在命令行切换到myWebApp目录，执行：mvn package，构建成功后，myWebApp目录下多了一个target目录，在这个目录下会打包成myWebApp.war，把这个war包拷贝到Tomcat的发布目录下就可以运行了。如下图所示：
+
+![image](maven-image/打包发布.png)
+
+![image](maven-image/打包发布成功.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;打包成功，在myWebApp\target目录下生成了一个myWebApp.war文件，如下图所示：
+
+![image](maven-image/打包后生成目录.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;将myWebApp.war放到tomcat服务器中运行，如下图所示：
+
+![image](maven-image/运行目录.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;运行效果如下：
+
+![image](maven-image/运行效果.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;除了使用Tomcat服务器运行Web项目之外，我们还可以在Web项目中集成jetty发布运行，首先在pom.xml文件中<font color='red' font-weight='bold'>配置Jetty</font>插件，如下：
+```
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mycompany.app</groupId>
+  <artifactId>myWebApp</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>myWebApp Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>myWebApp</finalName>
+     <pluginManagement>
+        <!--配置Jetty-->
+          <plugins>
+            <plugin>
+             <groupId>org.mortbay.jetty</groupId>   
+             <artifactId>maven-jetty-plugin</artifactId>
+            </plugin>
+          </plugins>
+    </pluginManagement>
+  </build>
+</project>
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;打开命令行窗口，切换到myWebApp目录，然后执行：<font color='red' font-weight='bold'>mvn jetty:run</font>启动jetty服务器，如下图所示：
+
+![image](maven-image/运行jetty.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;接着就可以在8080端口上访问应用了。如下图所示：
+
+![image](maven-image/运行jetty效果.png)
+
+#### 3、Maven创建项目的命令说明
+
+mvn archetype:create或者mvn archetype:generate   固定写法（创建maven项目）
+
+- -DgroupId&nbsp;&nbsp;&nbsp;&nbsp;    组织标识（包名）
+- -DartifactId&nbsp;&nbsp;&nbsp;&nbsp;  项目名称
+- -DarchetypeArtifactId&nbsp;&nbsp;&nbsp;&nbsp;  指定ArchetypeId,maven-archetype-quickstart,创建一个Java Project：maven-archetype-webapp，创建一个web project
+- -DinteractiveMode&nbsp;&nbsp;&nbsp;&nbsp;  是否使用交互模式
+- archetype是mvn内置的一个插件，create任务可以创建一个java项目骨架，DgroupId是软件包的名称，DartifactId是项目名，DarchetypeArtifactId是可用的mvn项目骨架，
+<font color='yellow' font-weight='bold'>目前可以使用的骨架有：</font>
+
+* maven-archetype-archetype
+* maven-archetype-j2ee-simple
+* maven-archetype-mojo
+* maven-archetype=portlet
+* maven-archetype-profiles(currently under development)
+* maven-archetype-quickstart
+* maven-archetype-simple(currently under development)
+* maven-archetype-site
+* maven-archetype-site-simple
+* maven-archetype-webapp
+
+&nbsp;&nbsp;&nbsp;&nbsp;每一个骨架都会建相应的目录结构和一些通用的文件，最常用的是<font color='red'>maven-archetype-quickstart和maven-archetype-webapp</font>骨架。maven-archetype-quickstart骨架是用来创建一个java project，而maven-archetype-webapp骨架则是用来创建一个javaWeb project。
