@@ -35,7 +35,11 @@
 #### 1、依赖配置
 
 > 依赖配置主要包含如下元素：
+
 ```
 <!--添加依赖配置-->
 <font color='#5400FF'><</font><font color='#800000'>dependencies</font><font color='#5400FF'>></font>
+    <font color='#5400FF'><</font><font color='#800000'>dependency</font><font color='#5400FF'>></font>
+        <font color='#5400FF'><</font><font color='#800000'>groupId</font><font color='#5400FF'>></font>junit
+        <font color='#5400FF'></</font><font color='#800000'>groupId</font><font color='#5400FF'>></font>
 ```
