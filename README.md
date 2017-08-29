@@ -1,37 +1,78 @@
-## Welcome to GitHub Pages
+Apache Maven
 
-You can use the [editor on GitHub](https://github.com/jackieliutao/maven-note/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+ What is it?
+ -----------
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+ Maven is a software project management and comprehension tool. Based on
+ the concept of a Project Object Model (POM), Maven can manage a project's
+ build, reporting and documentation from a central piece of information.
 
-### Markdown
+ Documentation
+ -------------
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+ The most up-to-date documentation can be found at https://maven.apache.org/.
 
-```markdown
-Syntax highlighted code block
+ Release Notes
+ -------------
 
-# Header 1
-## Header 2
-### Header 3
+ The full list of changes can be found at https://maven.apache.org/docs/history.html.
 
-- Bulleted
-- List
+ System Requirements
+ -------------------
 
-1. Numbered
-2. List
+ JDK:
+   1.7 or above (this is to execute Maven - it still allows you to build against 1.3
+   and prior JDK's).
+ Memory:
+   No minimum requirement.
+ Disk:
+   Approximately 10MB is required for the Maven installation itself. In addition to
+   that, additional disk space will be used for your local Maven repository. The size
+   of your local repository will vary depending on usage but expect at least 500MB.
+ Operating System:
+   Windows:
+     Windows 2000 or above.
+   Unix based systems (Linux, Solaris and Mac OS X) and others:
+     No minimum requirement.
 
-**Bold** and _Italic_ and `Code` text
+ Installing Maven
+ ----------------
 
-[Link](url) and ![Image](src)
-```
+ 1) Unpack the archive where you would like to store the binaries, e.g.:
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+   Unix-based operating systems (Linux, Solaris and Mac OS X)
+     tar zxvf apache-maven-3.x.y.tar.gz
+   Windows
+     unzip apache-maven-3.x.y.zip
 
-### Jekyll Themes
+ 2) A directory called "apache-maven-3.x.y" will be created.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jackieliutao/maven-note/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+ 3) Add the bin directory to your PATH, e.g.:
 
-### Support or Contact
+   Unix-based operating systems (Linux, Solaris and Mac OS X)
+     export PATH=/usr/local/apache-maven-3.x.y/bin:$PATH
+   Windows
+     set PATH="c:\program files\apache-maven-3.x.y\bin";%PATH%
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+ 4) Make sure JAVA_HOME is set to the location of your JDK
+
+ 5) Run "mvn --version" to verify that it is correctly installed.
+
+ For complete documentation, see https://maven.apache.org/download.html#Installation
+
+ Licensing
+ ---------
+
+ Please see the file called LICENSE.
+
+ Maven URLS
+ ----------
+
+ Home Page:          https://maven.apache.org/
+ Downloads:          https://maven.apache.org/download.html
+ Release Notes:      https://maven.apache.org/docs/history.html
+ Mailing Lists:      https://maven.apache.org/mail-lists.html
+ Source Code:        https://git-wip-us.apache.org/repos/asf/maven.git
+ Issue Tracking:     https://issues.apache.org/jira/browse/MNG
+ Wiki:               https://cwiki.apache.org/confluence/display/MAVEN/
+ Available Plugins:  https://maven.apache.org/plugins/index.html
