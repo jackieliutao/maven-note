@@ -4,7 +4,7 @@
 > 1、聚合配置
 
 ```
-      <font color="blue"><</font>modules<font color="blue">></font>
+      <span style="color:red"><</span>modules<span color="blue">></span>
             <module>模块一</module>
             <module>模块二</module>
             <module>模块三</module>
