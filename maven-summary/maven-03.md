@@ -96,18 +96,18 @@
 
 #### 3、传递性依赖
 
-![image](maven-image-04/传递性依赖.png)
+![image](maven-image-03/传递性依赖.png)
 
 MakeFriends.jar直接依赖于HelloFriends.jar，而HelloFriends.jar又直接依赖于Hello.jar，那么MakeFriends.jar也依赖于Hello.jar,这就是传递性依赖，只不过这种依赖是间接依赖，如上图所示。
 
-![image](maven-image-04/依赖传递.png)
+![image](maven-image-03/依赖传递.png)
 
 如上图所示，hibernate-core 依赖 hibernate-commons-annotations ，而 hibernate-commons-annotations 又依赖 slf4j-api ，hibernate-core 对 slf4j-api 的依赖就是传递依赖。我们只需要引入 hibernate-core 构件的依赖，不用考虑它还有其它的依赖， 也不用担心会引入多余或冲突的依赖，Maven 会自动为我们引入依赖及传递依赖。
 
 #### 4、依赖传递和依赖范围
 如上所述，几种依赖关系分别叫做第一直接依赖，第二直接依赖和传递性依赖，其中第一直接依赖和第二直接依赖的依赖范围，决定了传递性依赖的依赖范围。
 
-![image](maven-image-04/传递性依赖的范围.png)
+![image](maven-image-03/传递性依赖的范围.png)
 
 #### 5、依赖冲突
 
@@ -160,11 +160,11 @@ MakeFriends.jar直接依赖于HelloFriends.jar，而HelloFriends.jar又直接依
 
 > > * （1）中央仓库：Maven默认的远程仓库，URL地址：http://search.maven.org/
 
-> > ![image](maven-image-04/远程仓库-中央仓库.png)
+> > ![image](maven-image-03/远程仓库-中央仓库.png)
 
 > > * （2）私服
 
-> > ![image](maven-image-04/远程仓库-私服.png)
+> > ![image](maven-image-03/远程仓库-私服.png)
 
 ### 四：生命周期
 
