@@ -70,7 +70,7 @@
                     Echo %JAVA_HOME%
                     Java -version
 ```
-         
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](image/setup.png)
 
 
