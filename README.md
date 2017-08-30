@@ -75,4 +75,4 @@ Apache Maven
  Source Code:        https://git-wip-us.apache.org/repos/asf/maven.git
  Issue Tracking:     https://issues.apache.org/jira/browse/MNG
  Wiki:               https://cwiki.apache.org/confluence/display/MAVEN/
- Available Plugins:  https://maven.apache.org/plugins/index.html
+ Available Plugins:  https://maven.apache.org/plugins/index.htmlmaven

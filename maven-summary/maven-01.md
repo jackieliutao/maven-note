@@ -1,5 +1,3 @@
-# Maven学习总结
-
 ### 一、Maven的基本概念
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maven是一个强大的Java<font color="red">项目构建工具</font>。
 
